@@ -5101,6 +5101,7 @@ body.offcanvas-open {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   height: 250px;
+  width: 100% !important;
 }
 .product .thumb .image img.hover-image {
   position: absolute;
