@@ -503,3 +503,51 @@
 
 
 })(jQuery);
+
+
+
+
+
+
+// video 
+const playbutton = document.querySelector('.playbutton')
+let video = document.querySelector('video')
+let started = false
+
+
+
+playbutton.addEventListener('click', () => {
+
+  if(video.paused) {
+    video.play()
+    playbutton.classList.add('playing')
+  } else {
+    video.pause()
+    playbutton.classList.remove('playing')
+  }
+})
+
+//only used if the controls attribute is taken off the video element
+// video.addEventListener('click', () => {
+  // if(video.paused) {
+  // video.play() 
+  // } else {
+  // video.pause()
+  // }
+// })
+
+
+video.addEventListener('ended', () => {
+  playbutton.classList.remove('playing')  
+})
+
+
+video.addEventListener('play', () => {
+  playbutton.classList.add('playing')  
+})
+
+
+video.addEventListener('pause', () => {
+  playbutton.classList.remove('playing')  
+})
+// video 
