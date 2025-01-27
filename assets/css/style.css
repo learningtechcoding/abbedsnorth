@@ -3293,7 +3293,8 @@ body.offcanvas-open {
 .grand-totall {
   background-color: #ebebeb;
   border: 1px solid #ebebeb;
-  border-radius: 0px;
+  border-radius: 18px;
+  height: 100%;
   padding: 45px 30px 50px;
 }
 
