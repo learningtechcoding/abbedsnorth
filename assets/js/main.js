@@ -551,3 +551,91 @@ video.addEventListener('pause', () => {
   playbutton.classList.remove('playing')  
 })
 // video 
+
+
+// Crads Size Selected Start
+document.addEventListener('DOMContentLoaded', () => {
+const sizeCards = document.querySelectorAll('.size-card');
+
+sizeCards.forEach(card => {
+card.addEventListener('click', () => {
+  sizeCards.forEach(c => c.classList.remove('active'));
+  card.classList.add('active');
+});
+});
+});
+
+ 
+// Crads Size Selected End 
+
+// ################>Fabric Style Start <###################### 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fabricCards = document.querySelectorAll('.fabric-card');
+  
+    fabricCards.forEach(card => {
+      card.addEventListener('click', () => {
+        fabricCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+  });
+  
+// ################>Fabric Style End  <######################
+document.addEventListener('DOMContentLoaded', () => {
+    const fabricCards = document.querySelectorAll('.fabric-card');
+  
+    fabricCards.forEach(card => {
+      card.addEventListener('click', () => {
+        fabricCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+  });
+  
+
+// ################>Matris   End <###################### 
+// ################>Storage  Start<######################
+document.addEventListener('DOMContentLoaded', () => {
+    const fabricCards = document.querySelectorAll('.storage-card');
+  
+    fabricCards.forEach(card => {
+      card.addEventListener('click', () => {
+        fabricCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+  });
+  
+
+// ################>Storage  End <###################### 
+
+// ################> matress-card  Start<######################
+document.addEventListener('DOMContentLoaded', () => {
+    const fabricCards = document.querySelectorAll('.matress-card');
+  
+    fabricCards.forEach(card => {
+      card.addEventListener('click', () => {
+        fabricCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+  });
+  
+
+// ################> matress-card  End <###################### 
+// ################> matress-card  Start<######################
+document.addEventListener('DOMContentLoaded', () => {
+    const fabricCards = document.querySelectorAll('.color-card');
+  
+    fabricCards.forEach(card => {
+      card.addEventListener('click', () => {
+        fabricCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+  });
+  
+
+// ################> matress-card  End <###################### 
+

@@ -2459,7 +2459,7 @@ body.offcanvas-open {
 }
 
 .product-details-content h2 {
-  color: #474747;
+  color: #004868;
   font-size: 24px;
   text-transform: capitalize;
   line-height: 1;
@@ -2544,13 +2544,13 @@ body.offcanvas-open {
   width: 100%;
   line-height: 24px;
 }
-.product-details-content .pro-details-quality {
+/* .product-details-content .pro-details-quality {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 30px 0;
   width: 100%;
-}
+} */
 .product-details-content .pro-details-quality .cart-plus-minus {
   border: 1px solid #ebebeb;
   display: inline-block;
@@ -2558,7 +2558,7 @@ body.offcanvas-open {
   overflow: hidden;
   padding: 0;
   position: relative;
-  width: 80px;
+  width: 100%;
 }
 .product-details-content .pro-details-quality .cart-plus-minus .qtybutton {
   color: #474747;
@@ -2584,7 +2584,7 @@ body.offcanvas-open {
   margin: 0;
   padding: 0;
   text-align: center;
-  width: 80px;
+  /* width: 80px; */
   outline: none;
 }
 .product-details-content .pro-details-quality .cart-plus-minus .inc.qtybutton {
@@ -2702,6 +2702,7 @@ body.offcanvas-open {
   position: relative;
   display: block;
   margin-bottom: 0;
+  
   margin: auto;
 
   border-bottom : 2px solid #ebebeb;
@@ -2715,7 +2716,7 @@ body.offcanvas-open {
   color: #474747;
   padding: 0 0 15px 0;
   margin: 0 30px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   position: relative;
   -webkit-transition: all 300ms linear;
@@ -2730,7 +2731,7 @@ body.offcanvas-open {
   background-color: #004868;
 }
 .description-review-topbar.nav a.active {
-  color: #212121;
+  color: #004868;
 }
 .description-review-topbar.nav a.active:after {
   background-color: #004868;
@@ -6410,3 +6411,155 @@ video {
 
 
 /* vidoes End  */
+
+.lines{
+  width: 100%;
+  border-bottom: 1px solid #ebebeb;
+}
+
+
+/*################> Cards Size Start <##############  */
+.size-card {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s,
+   box-shadow 0.3s;
+
+  height: 100%;
+}
+.size-card img {
+  max-width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.size-card:hover, .size-card.active {
+  border-color: #004868;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.size-card p {
+  margin: 0;
+  font-size: 14px;
+}
+/*################> Cards Size End <##############  */
+
+
+/*#################> Fabric  type style details Start <#################  */
+
+.fabric-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.fabric-card img {
+  max-width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.fabric-card:hover, .fabric-card.active {
+  border-color: #004868;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.fabric-card p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+/*#################> Fabric  type style details End   <#################*/
+/*#################> Storage style details Start <#################  */
+
+.storage-card{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.storage-card img {
+  max-width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.storage-card:hover, .storage-card.active {
+  border-color: #004868;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.storage-card p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+/*#################> Fabric  type style details End   <#################*/
+/*#################> Matris Start  style details Start <#################  */
+
+.matress-card{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.matress-card img {
+  max-width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.matress-card:hover, .matress-card.active {
+  border-color: #004868;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.matress-card p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+/*#################> matress-card style details End   <#################*/
+/*#################> Matris Start  style details Start <#################  */
+
+.color-card{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.color-card img {
+  max-width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.color-card:hover, .color-card.active {
+  border-color: #004868;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.color-card p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+/*#################> matress-card style details End   <#################*/
