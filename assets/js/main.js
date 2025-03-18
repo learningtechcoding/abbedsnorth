@@ -639,3 +639,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ################> matress-card  End <###################### 
 
+
+
+
+
+// Storage and Fabric color Script 
+document.querySelectorAll('.fabric-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const isSelected = this.classList.contains('selected');
+        document.querySelectorAll('.fabric-card').forEach(c => c.classList.remove('selected'));
+        document.querySelectorAll('.color-section').forEach(section => section.style.display = 'none');
+        document.getElementById('fabricColorHeading').style.display = 'none';
+        document.getElementById('storageColorHeading').style.display = 'none';
+
+        if (!isSelected) {
+            this.classList.add('selected');
+            const fabric = this.getAttribute('data-fabric');
+            const isStorage = fabric.includes('Storage') || fabric.includes('Ottoman') || fabric.includes('Metal Frame');
+
+            if (isStorage) {
+                document.getElementById(`colorSection${fabric.replace(/ /g, '')}`).style.display = 'flex';
+                document.getElementById('storageColorHeading').textContent = `${fabric}  Option*`;
+                document.getElementById('storageColorHeading').style.display = 'block';
+            } else {
+                document.getElementById(`colorSection${fabric.replace(/ /g, '')}`).style.display = 'flex';
+                document.getElementById('fabricColorHeading').textContent = `${fabric} Color`;
+                document.getElementById('fabricColorHeading').style.display = 'block';
+            }
+        }
+    });
+});
+
+document.querySelectorAll('.color-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const isSelected = this.classList.contains('selected');
+        document.querySelectorAll('.color-card').forEach(c => c.classList.remove('selected'));
+
+        if (!isSelected) {
+            this.classList.add('selected');
+        }
+    });
+});
+// Storage and Fabric color Script 

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabric Selection</title>
+ 
+    <!-- vendor css (Bootstrap & Icon Font) -->
+    <link rel="stylesheet" href="./assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/vendor/simple-line-icons.css" />
+    <link rel="stylesheet" href="./assets/css/vendor/ionicons.min.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/animate.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/jquery-ui.min.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/jquery.lineProgressbar.css">
+    <link rel="stylesheet" href="./assets/css/plugins/nice-select.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/venobox.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <style>
+        .fabric-card, .color-card {
+            cursor: pointer;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .fabric-card.selected, .color-card.selected {
+            border-color: #007bff;
+        }
+        .color-section {
+            display: none;
+        }
+        .color-heading {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="">
+        <div class="row g-3">
+            <div class="col-6 col-md-4">
+                <div class="fabric-card" data-fabric="Teddy Boucle">
+                    <img src="https://static.shopapps.site/options/swatch/831341/51a165a93467a49061a7b2f4b54249ce.jpeg"  alt="Teddy Boucle">
+                    <p>Teddy Boucle</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="fabric-card" data-fabric="Naples">
+                    <img src="https://static.shopapps.site/options/swatch/831341/169174132f310c8d844f71f60db93e26.jpeg" alt="Naples">
+                    <p>Naples</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="fabric-card" data-fabric="Plush Velvet">
+                    <img src="https://static.shopapps.site/options/swatch/831341/273d32ee7c9de3987fdb332431cc5305.png" alt="Plush Velvet">
+                    <p>Plush Velvet</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fabric Color Heading -->
+        <h3 class="color-heading" id="fabricColorHeading" style="display: none;"></h3>
+
+        <!-- Fabric Color Sections -->
+        <div class="row g-3 color-section" id="colorSectionTeddyBoucle">
+            <div class="col-6 col-md-3">
+                <div class="color-card" data-color="Truffle">
+                    <img src="https://static.shopapps.site/options/swatch/831341/95f861e8e9df5cbcb1fc6a05b87b355e.jpeg" alt="Plush Velvet">
+                    <p>Truffle</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="color-card" data-color="Granite">
+                    <img src="https://static.shopapps.site/options/swatch/831341/4457fdc3dd344ed22f563ed9578dd050.jpeg" alt="Plush Velvet">
+                    <p>Granite</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="color-card" data-color="Cream">
+                    <img src="https://static.shopapps.site/options/swatch/831341/47c05183bb2305aabe6410c3e70c9696.jpeg" alt="Plush Velvet">
+                    <p>Cream</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="color-card" data-color="Latte">
+                    <img src="https://static.shopapps.site/options/swatch/831341/c37064a685e0e5679832cd45ec3a7919.jpeg" alt="Plush Velvet">
+                    <p>Latte</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 color-section" id="colorSectionNaples">
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="Black">
+                    <img src="https://static.shopapps.site/options/swatch/831341/378eab77c82e02480144392f33a87a30.jpeg" alt="Plush Velvet">
+                    <p>Cream</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="White">
+                    <img src="https://static.shopapps.site/options/swatch/831341/1cdc878e1cf6134eec96a3947ee24e0c.jpeg" alt="Plush Velvet">
+                    <p>Beige</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="Gray">
+                    <img src="https://static.shopapps.site/options/swatch/831341/1cdc878e1cf6134eec96a3947ee24e0c.jpeg" alt="Plush Velvet">
+                    <p>Sand</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="Gray">
+                    <img src="https://static.shopapps.site/options/swatch/831341/03364b905fda1b18dda0842b5d168359.jpeg" alt="Plush Velvet">
+                    <p>Mink</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="Gray">
+                    <img src="https://static.shopapps.site/options/swatch/831341/b5ce2e83cbb39ab9f99b9f39ae39173a.jpeg" alt="Plush Velvet">
+                    <p>Seal Gray</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 color-section" id="colorSectionPlushVelvet">
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="Red">
+                    <img src="https://static.shopapps.site/options/swatch/831341/699a617e733d1f4c3943709266141994.jpeg" alt="Plush Velvet">
+                    <p>Silver</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="Blue">
+                    <img src="https://static.shopapps.site/options/swatch/831341/59b5d4a602341eb4d89bc3f3dc4a515a.jpeg" alt="Plush Velvet">
+                    <p>Turmeric</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="Green">
+                    <img src="https://static.shopapps.site/options/swatch/831341/8db3e3490da78e87be479b163ceec43f.jpeg" alt="Plush Velvet">
+                    <p>Green</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row g-3">
+            <div class="col-6 col-md-4">
+                <div class="fabric-card" data-fabric="Not Storage">
+                    <img src="https://static.shopapps.site/options/swatch/831341/be38bf2541a35e04981d0348f69a2869.jpeg"  alt="Teddy Boucle">
+                    <p>Not Storage</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="fabric-card" data-fabric="Ottoman">
+                    <img src="https://static.shopapps.site/options/swatch/831341/6f74bcfe2773b6525e96e3528ce3c180.png" alt="Naples">
+                    <p>Ottoman</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="fabric-card" data-fabric="Metal Frame">
+                    <img src="https://static.shopapps.site/options/swatch/831341/87c09f1e8405e9f1afc181e06b92bc73.jpeg" alt="Plush Velvet">
+                    <p>Metal Frame</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Storage Color Heading -->
+        <h3 class="color-heading" id="storageColorHeading" style="display: none;"></h3>
+
+        <!-- Storage Color Sections -->
+        <div class="row g-3 color-section" id="colorSectionNotStorage">
+            <div class="col-6 col-md-3">
+                <div class="color-card" data-color="Slat">
+                    <img src="https://static.shopapps.site/options/swatch/831341/8a3da9085b08531ccbb1c70c02dc485c.jpeg" alt="Plush Velvet">
+                    <p>Slat Only</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="color-card" data-color="Granite">
+                    <img src="https://static.shopapps.site/options/swatch/831341/323251f59eff0be2cd4160feb6c3e911.png" alt="Plush Velvet">
+                    <p>Solid Base £50.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 color-section" id="colorSectionOttoman">
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="Black">
+                    <img src="https://static.shopapps.site/options/swatch/831341/3ba8d083500523ee085615b5045f2677.png" alt="Plush Velvet">
+                    <p>Cream</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="White">
+                    <img src="https://static.shopapps.site/options/swatch/831341/056510ea53dd927ae40e8f4cc86884a8.png" alt="Plush Velvet">
+                    <p>Beige</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="Gray">
+                    <img src="https://static.shopapps.site/options/swatch/831341/acf56d024a37e8560f3461cbcfddee13.png" alt="Plush Velvet">
+                    <p>Sand</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 color-section" id="colorSectionMetalFrame">
+            <div class="col-6 col-md-4">
+                <div class="color-card" data-color="Red">
+                    <img src="https://static.shopapps.site/options/swatch/831341/acf56d024a37e8560f3461cbcfddee13.png" alt="Plush Velvet">
+                    <p>Metal Frame</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+
+       <!-- Global Vendor, plugins JS -->
+
+    <!-- Vendor JS -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
+
+    <!--Plugins JS-->
+    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins/jquery-ui.min.js"></script>
+    <script src="assets/js/plugins/jquery.nice-select.min.js"></script>
+    <script src="assets/js/plugins/countdown.js"></script>
+    <script src="assets/js/plugins/scrollup.js"></script>
+    <script src="assets/js/plugins/jquery.waypoints.js"></script>
+    <script src="assets/js/plugins/jquery.lineProgressbar.js"></script>
+    <script src="assets/js/plugins/jquery.zoom.min.js"></script>
+    <script src="assets/js/plugins/venobox.min.js"></script>
+    <script src="assets/js/plugins/ajax-mail.js"></script>
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+    <!-- <script src="assets/js/vendor/vendor.min.js"></script>
+    <script src="assets/js/plugins/plugins.min.js"></script> -->
+
+    <!-- Main Js -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.fabric-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const isSelected = this.classList.contains('selected');
+                document.querySelectorAll('.fabric-card').forEach(c => c.classList.remove('selected'));
+                document.querySelectorAll('.color-section').forEach(section => section.style.display = 'none');
+                document.getElementById('fabricColorHeading').style.display = 'none';
+                document.getElementById('storageColorHeading').style.display = 'none';
+
+                if (!isSelected) {
+                    this.classList.add('selected');
+                    const fabric = this.getAttribute('data-fabric');
+                    const isStorage = fabric.includes('Storage') || fabric.includes('Ottoman') || fabric.includes('Metal Frame');
+
+                    if (isStorage) {
+                        document.getElementById(`colorSection${fabric.replace(/ /g, '')}`).style.display = 'flex';
+                        document.getElementById('storageColorHeading').textContent = `${fabric}  Option*`;
+                        document.getElementById('storageColorHeading').style.display = 'block';
+                    } else {
+                        document.getElementById(`colorSection${fabric.replace(/ /g, '')}`).style.display = 'flex';
+                        document.getElementById('fabricColorHeading').textContent = `${fabric} Color`;
+                        document.getElementById('fabricColorHeading').style.display = 'block';
+                    }
+                }
+            });
+        });
+
+        document.querySelectorAll('.color-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const isSelected = this.classList.contains('selected');
+                document.querySelectorAll('.color-card').forEach(c => c.classList.remove('selected'));
+
+                if (!isSelected) {
+                    this.classList.add('selected');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

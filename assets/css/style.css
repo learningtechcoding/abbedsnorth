@@ -2776,10 +2776,11 @@ body.offcanvas-open {
 }
 .description-review-bottom .product-description-wrapper p {
   margin: 0 0 8px;
-  font-size: 15px;
-  line-height: 28px;
+  font-size: 10px;
+  line-height: 15px;
   color: "Open Sans", sans-serif;
-  width: 84%;
+  width:100%;
+  margin-bottom: 0px;
 }
 @media only screen and (max-width: 767px) {
   .description-review-bottom .product-description-wrapper p {
@@ -6472,7 +6473,7 @@ video {
 
 .fabric-card p {
   margin: 0;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
 }
 /*#################> Fabric  type style details End   <#################*/
@@ -6559,7 +6560,29 @@ video {
 
 .color-card p {
   margin: 0;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
+  line-height: 15px;
 }
 /*#################> matress-card style details End   <#################*/
+
+
+/* Storage And Fabric Color css Start  */
+.fabric-card, .color-card {
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.fabric-card.selected, .color-card.selected {
+  border-color: #007bff;
+}
+.color-section {
+  display: none;
+}
+.color-heading {
+  margin-top: 20px;
+}
+/* Storage And Fabric Color css End  */
